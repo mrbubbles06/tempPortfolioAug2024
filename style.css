@@ -26,3 +26,33 @@ div {
 h1 {
   max-width: 20ch;
 }
+
+a {
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    hsla(53, 84%, 74%, 1) 0%,
+    hsla(336, 87%, 61%, 1) 50%,
+    hsla(262, 81%, 71%, 1) 100%
+  );
+  color: transparent;
+  background-clip: text;
+  animation: clickme ease-in-out infinite 3s alternate;
+  background-size: 500% auto;
+  transition: transform 250ms ease-in-out;
+}
+
+a:hover {
+  transform: scale(1.1);
+}
+
+@keyframes clickme {
+  0% {
+    background-position: 0% 50%;
+    transform: scale(1.05);
+  }
+  100% {
+    background-position: 100% 50%;
+    transform: scale(1);
+  }
+}
